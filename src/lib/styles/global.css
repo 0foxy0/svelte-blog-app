@@ -1,0 +1,109 @@
+:root {
+  --font-body: "Trebuchet MS", Helvetica, sans-serif;
+  --theme-text-light: gray;
+  --theme-accent-light: rgb(58, 126, 242);
+  --theme-text-error: rgb(245, 65, 65);
+}
+
+:root {
+  color-scheme: light;
+  --theme-background: white;
+  --theme-text: black;
+  --theme-seperator-color: #e6e6e6;
+  --theme-accent: #2743e4;
+  --theme-input-background: rgb(198, 198, 198);
+  --theme-button-background: #d8d8d8;
+  --theme-button-secondary-hover: #b4b4b4;
+}
+
+:root.dark {
+  color-scheme: dark;
+  --theme-background: #000014;
+  --theme-text: white;
+  --theme-seperator-color: #111827;
+  --theme-accent: rgb(58, 85, 242);
+  --theme-input-background: #3b3b3b;
+  --theme-button-background: #6b6b6b;
+  --theme-button-secondary-hover: #9d9d9d;
+}
+
+html,
+body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--theme-text);
+  background-color: var(--theme-background);
+}
+html {
+  padding: 10px 32px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  word-break: break-all;
+}
+
+.flex-box {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  color: var(--theme-accent);
+  font-weight: 400;
+  text-underline-offset: 0.08em;
+  text-decoration: none;
+  align-items: center;
+  gap: 0.5rem;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+input {
+  height: 40px;
+  border: 1px solid transparent;
+  outline: none;
+  background-color: var(--theme-input-background);
+}
+input:focus,
+input:hover {
+  border: 1px solid var(--theme-accent);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--theme-button-background);
+}
+button:hover {
+  background-color: var(--theme-accent);
+}
+
+.form-error {
+  margin-top: 10px;
+  text-align: center;
+  color: var(--theme-text-error);
+}
+
+@keyframes color-switching {
+  0% {
+    color: var(--theme-text);
+  }
+  50% {
+    color: var(--theme-accent);
+  }
+  100% {
+    color: var(--theme-text);
+  }
+}
